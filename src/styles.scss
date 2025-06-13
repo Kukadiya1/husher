@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: var(--color);
+}
+
+:root {
+    --white: #f3f1e0;
+    --yellow: #fc0;
+    --grey: #f4f2e226;
+    --secondary: #ad9069;
+    --color: #212121;
+}
+
+@font-face {
+    font-family: 'AeonikFono-Normal';
+    src: url('../public/Font/Aeonik-Black.5KTTcupi.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AeonikFono-Bold';
+    src: url('../public/Font/AeonikFono-Bold.DWHuAXtV.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AeonikFono-Regular';
+    src: url('../public/Font/AeonikFono-Regular.CQIIWGym.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UniversalSansDisplay';
+    src: url('../public/Font/UniversalSansDisplay-500.BgXwjJUe.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UniversalSansText';
+    src: url('../public/Font/UniversalSansText-500.B4ZqLVem.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+
+.h-100 {
+    height: 100%;
+}
+
+.z-100 {
+    z-index: 100;
+}
+
+.z-200 {
+    z-index: 200;
+}
+
+.z-300 {
+    z-index: 300;
+}
+
+.z-400 {
+    z-index: 400;
+}
+
+.z-500 {
+    z-index: 500;
+}
+
+.f-serif-bold {
+    font-family: AeonikFono-Bold, serif;
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    align-items: center;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
