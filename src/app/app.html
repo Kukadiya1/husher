@@ -201,19 +201,329 @@
     </div>
 
     <div class="section-4"></div>
+
     <div class="section-5">
       <div class="item-wrapper">
         @for (item of itemsList; track $index) {
-        <div class="item">
+        <div class="item" (mouseenter)="item.isActive = true" (mouseleave)="item.isActive = false">
           <div>
             {{$index+1 | number:'2.0-0'}}
           </div>
           <div>
             {{item.name}}
           </div>
-          <!-- <img class="item-image" [src]="item.imageUrl" alt=""> -->
+          @if(item.isActive){
+          <img class="item-image" [src]="item.imageUrl" alt="">
+          }
         </div>
         }
+      </div>
+    </div>
+  </div>
+
+  <div class="section-6">
+    <img class="setup-img" [src]="activeSetupItemImageUrl" alt="">
+    <div class="section-wrapper">
+      <div class="absolute microphone-text">
+        Microphone Setups
+      </div>
+      <div class="product-box-overlay">
+        @for (item of setupItemList; track $index) {
+        <div class="product-item" [ngClass]="{'active':item.isActive}" (click)="setActive($index)">
+          <div class="product-no">
+            {{$index+1 | number:'2.0-0'}}
+          </div>
+          <div class="name">
+            {{item.name}}
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-7">
+    <div class="section-wrapper">
+      <div class="specification-text">
+        Technical Specification
+      </div>
+
+      <div class="flex specification-wrapper">
+        <div class="left-section">
+          <div class="sticky-wrapper">
+            <div class="specification">
+              Before you go ahead and invest in a HHHusher, please be aware of the following points. Still not sure?
+            </div>
+            <div>
+              <button class="btn btn-primary">
+                FAQ
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="flex spec-wrapper">
+            <div class="left-sec">
+              <div class="sticky-spec-wrapper">
+                HHHusher
+              </div>
+            </div>
+            <div class="right-sec">
+              <div class="flex spec">
+                <div>
+                  Height
+                </div>
+                <div>
+                  50 mm (1.97 in)
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Depth
+                </div>
+                <div>
+                  180 mm (7.08 in)
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Width
+                </div>
+                <div>
+                  107 mm (4.21 in)
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Weight
+                </div>
+                <div>
+                  1 kg (2.2 lbs)
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Materials
+                </div>
+                <div>
+                  Carbon fiber, Neoprene, plastic & acoustic felt
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex spec-wrapper">
+            <div class="left-sec">
+              <div class="sticky-spec-wrapper">
+                hi-hats
+              </div>
+            </div>
+            <div class="right-sec">
+              <div class="flex spec">
+                <div>
+                  diameter
+                </div>
+                <div>
+                  14”, 15”, 16”
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Weight
+                </div>
+                <div>
+                  Thin to extra heavy
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Material
+                </div>
+                <div>
+                  Bronze, alloy
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex spec-wrapper">
+            <div class="left-sec">
+              <div class="sticky-spec-wrapper">
+                Hi-hats post
+              </div>
+            </div>
+            <div class="right-sec">
+              <div class="flex spec">
+                <div>
+                  Diameter
+                </div>
+                <div>
+                  0.5” to 1.0”
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Type
+                </div>
+                <div>
+                  Tubular
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex spec-wrapper">
+            <div class="left-sec">
+              <div class="sticky-spec-wrapper">
+                Other requirements
+              </div>
+            </div>
+            <div class="right-sec">
+              <div class="flex spec">
+                <div>
+                  Side of the drummer
+                </div>
+                <div>
+                  Left
+                </div>
+              </div>
+              <div class="flex spec">
+                <div>
+                  Extention past the hi-hats
+                </div>
+                <div>
+                  Minimum of 1.5”
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="section-8">
+    <div class="about-wrapper">
+      <div class="w-100 child-left">
+        <div class="flex-col-wrapper">
+          <div class="main-text">
+            Get to Know the Different Faces Behind HHHusher.
+          </div>
+          <div class="flex-sub-wrapper">
+            <div>
+              HHHusher Enterprises is a Montreal based company, owned and operated by Luc Prefontaine and Andres
+              Norambuena.
+            </div>
+            <div>
+              Our company goal is to give drummers, recording and live events engineers an affordable, versatile and
+              highly effective tool to help them achieve trouble free drum recordings without compromising on quality.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 child-right">
+        <div class="grid-wrapper">
+          <div class="grid-container">
+            <div>
+              <img class="about-img" src="Media/images/about-us/img1.jpeg" alt="">
+            </div>
+            <div class="flex detail-wrapper">
+              <div class="sub-detail">
+                <div class="name">
+                  Andres Norambuena
+                </div>
+                <div class="role">
+                  CEO - Partner
+                </div>
+              </div>
+              <div class="plus-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-fragments-svg -icon"
+                  aria-hidden="true">
+                  <path d="M12 5.00012V19.0001" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="grid-container">
+            <div>
+              <img class="about-img" src="Media/images/about-us/img2.jpeg" alt="">
+            </div>
+            <div class="flex detail-wrapper">
+              <div class="sub-detail">
+                <div class="name">
+                  Luc Préfontaine
+                </div>
+                <div class="role">
+                  Product Designer - Partner
+                </div>
+              </div>
+              <div class="plus-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-fragments-svg -icon"
+                  aria-hidden="true">
+                  <path d="M12 5.00012V19.0001" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="grid-container">
+            <div>
+              <img class="about-img" src="Media/images/about-us/img3.jpeg" alt="">
+            </div>
+            <div class="flex detail-wrapper">
+              <div class="sub-detail">
+                <div class="name">
+                  Marianne Fortier-Landry
+                </div>
+                <div class="role">
+                  CFO - Parterner
+                </div>
+              </div>
+              <div class="plus-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-fragments-svg -icon"
+                  aria-hidden="true">
+                  <path d="M12 5.00012V19.0001" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="grid-container">
+            <div>
+              <img class="about-img" src="Media/images/about-us/img4.jpeg" alt="">
+            </div>
+            <div class="flex detail-wrapper">
+              <div class="sub-detail">
+                <div class="name">
+                  Olivia Landry
+                </div>
+                <div class="role">
+                  Production manager
+                </div>
+              </div>
+              <div class="plus-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-fragments-svg -icon"
+                  aria-hidden="true">
+                  <path d="M12 5.00012V19.0001" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

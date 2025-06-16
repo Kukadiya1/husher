@@ -120,3 +120,19 @@ body {
 .text-upper {
     text-transform: uppercase;
 }
+
+.btn.btn-primary {
+    padding: 1rem 2rem;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    outline: 0px;
+    font-size: .75rem;
+    border: 2px solid var(--yellow);
+    transition: all ease-in-out .5s;
+    font-family: AeonikFono-Bold;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--yellow);
+    }
+}
