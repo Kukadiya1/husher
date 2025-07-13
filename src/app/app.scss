@@ -1,63 +1,70 @@
-.nav {
-    padding: 2.7rem 2.35rem 1rem 2.35rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-wrapper {
+    z-index: 110;
 
-    .logo {
-        width: 12rem;
-        color: var(--white);
-    }
-
-    .nav-center {
-        padding: 0 2rem;
+    .nav {
+        padding: 2.7rem 2.35rem 1rem 2.35rem;
         display: flex;
-        background-color: var(--grey);
-        backdrop-filter: blur(30px);
-        color: var(--white);
-        height: 2.75rem;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font-size: .75rem;
 
-        .nav-item {
-            margin-left: 1rem;
-            cursor: pointer;
-
-            &:hover {
-                color: var(--yellow)
-            }
-        }
-    }
-
-    .nav-end {
-        display: flex;
-        gap: .75rem;
-        align-items: center;
-        justify-content: center;
-        height: 2.75rem;
-
-        .item {
-            padding: 0 1.75rem;
-            border-radius: 5px;
-            font-size: .75rem;
-            cursor: pointer;
+        .logo {
+            width: 12rem;
+            color: var(--white);
         }
 
-        .item-aspect {
-            height: 100%;
-            aspect-ratio: 1;
-            border-radius: 5px;
+        .nav-center {
+            padding: 0 2rem;
+            display: flex;
             background-color: var(--grey);
             backdrop-filter: blur(30px);
-            cursor: pointer;
+            color: var(--white);
+            height: 2.75rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: .75rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
 
-            svg {
-                height: 60%;
-                color: var(--white);
-                margin: auto;
+            .nav-item {
+                margin-left: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--yellow)
+                }
+            }
+        }
+
+        .nav-end {
+            display: flex;
+            gap: .75rem;
+            align-items: center;
+            justify-content: center;
+            height: 2.75rem;
+
+            .item {
+                padding: 0 1.75rem;
+                border-radius: 5px;
+                font-size: .75rem;
+                cursor: pointer;
+            }
+
+            .item-aspect {
+                height: 100%;
+                aspect-ratio: 1;
+                border-radius: 5px;
+                background-color: var(--grey);
+                backdrop-filter: blur(30px);
+                cursor: pointer;
+
+                svg {
+                    height: 60%;
+                    color: var(--white);
+                    margin: auto;
+                }
             }
         }
     }
@@ -79,9 +86,31 @@
         padding: 0 2.35rem 3rem 2.35rem;
 
         .content {
-            width: 200px;
+            width: 300px;
             font-size: 4rem;
             line-height: 4rem;
+        }
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 50px;
+        opacity: 0;
+        background-color: var(--yellow);
+        border-radius: 5px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            color: var(--color);
         }
     }
 }
@@ -95,6 +124,10 @@
         font-family: UniversalSansDisplay;
         margin-bottom: 8rem;
         line-height: 110%;
+
+        .relative {
+            opacity: 1;
+        }
     }
 }
 
@@ -218,6 +251,7 @@
                     font-size: 1rem;
                     line-height: 130%;
                     letter-spacing: 2px;
+                    position: relative;
                 }
             }
 
@@ -267,6 +301,7 @@
                         font-size: 1rem;
                         line-height: 130%;
                         letter-spacing: 2px;
+                        position: relative;
                     }
                 }
             }
@@ -274,9 +309,114 @@
     }
 }
 
+.section-4 {
+    position: relative;
+    // min-height: 1000vh;
+    background-color: #f3f1e0;
+
+    .canvas-wrapper {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 10;
+
+        #frame-feature {
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+
+    .h-full {
+        height: 100vh;
+    }
+
+    .info-wrapper {
+        margin-top: -100vh;
+        z-index: 100;
+        position: relative;
+
+        .feature-1 {
+            width: 39%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2rem;
+            justify-content: space-between;
+
+            .sub-1 {
+                font-family: UniversalSansDisplay;
+                font-weight: 100;
+                font-size: 5rem;
+                margin-top: 5rem;
+            }
+
+            .sub-2 {
+                font-family: UniversalSansText;
+                font-weight: 100;
+                font-size: 1.25rem;
+                font-weight: 500;
+                width: 72%;
+                // margin-top: 5rem;
+            }
+        }
+
+        .feature-2,
+        .feature-3,
+        .feature-4 {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-right: 2rem;
+            justify-content: center;
+            margin-left: auto;
+
+            .sub-1 {
+                font-family: UniversalSansDisplay;
+                font-weight: 100;
+                font-size: 4rem;
+            }
+
+            .sub-2 {
+                font-family: UniversalSansText;
+                font-size: 1.25rem;
+                font-weight: 500;
+                margin-top: 1.5rem;
+            }
+
+            .btn {
+                width: 42px;
+                height: 42px;
+                border: 2px solid #212121;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                margin-top: 1.5rem;
+
+                svg {
+                    width: 38px;
+                    margin: auto;
+                }
+            }
+        }
+
+    }
+}
+
 .section-5 {
     margin-top: 2rem;
     padding-top: 5rem;
+    position: relative;
+
+    .item-image {
+        position: absolute;
+        height: 400px;
+        z-index: 1;
+        left: 10%;
+    }
 
     .item-wrapper {
         font-family: UniversalSansText;
@@ -295,11 +435,12 @@
                 border-bottom: 2px solid var(--color);
             }
 
-            .item-image {
-                position: absolute;
-                height: 300px;
-                left: 15%;
+            &:hover {
+                opacity: 1;
+                transition: opacity .25s ease-in-out;
             }
+
+
 
         }
     }
@@ -465,10 +606,12 @@
         gap: 2rem;
 
         .child-left {
+            height: 834px;
+
             .flex-col-wrapper {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-between;
 
                 .main-text {
                     font-family: 'UniversalSansDisplay';
@@ -567,6 +710,7 @@
     height: 100vh;
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     .absolute-full-image {
         position: absolute;
@@ -606,12 +750,17 @@
     }
 }
 
+.footer-spacer {
+    padding-bottom: 565px;
+}
+
 .footer {
     position: fixed;
     width: 100%;
     left: 0;
     bottom: 0;
     z-index: -1;
+    background-color: var(--color);
 
     .footer-wrapper {
         padding: 2rem 3rem;
@@ -689,6 +838,7 @@
         .footer-text {
             font-family: UniversalSansText;
             font-size: 1.2rem;
+            color: #f3f1e0;
         }
     }
 }
